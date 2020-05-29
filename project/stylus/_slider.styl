@@ -1,0 +1,107 @@
+.slider
+  background $white
+  padding 38px 54px 46px
+  max-width 525px
+  width 100%
+  position relative
+  margin -37px 35px 0 0
+  box-shadow -65px 41px 65px rgba(39, 40, 48, 0.08)
+  border-radius 2px
+  &:after
+    content ''
+    position absolute
+    top 39px
+    left 98.4%
+    background-image url(../img/m1.png)
+    width 179px
+    height 201px
+  &__text
+    color $black-2
+    font-size 20px
+    font-weight 400
+    line-height 30px
+    text-align center
+  &__btn
+    display flex
+    justify-content center
+    align-items center
+    background #f24949
+    color $white
+    font-size 13px
+    font-weight 500
+    letter-spacing 3px
+    line-height 20px
+    text-transform uppercase
+    padding 10px
+    height 71px
+    &:hover
+      background #c73c3c
+    &--wrapper
+      padding-top 32px
+  &__range
+    display flex
+    justify-content space-between
+    padding-top 38px
+    padding-bottom 19px
+    &--current,
+    &--return
+      color $black-2
+      font-size 15px
+      font-weight 400
+
+    &--return
+      display flex
+      flex-direction column
+      align-items flex-end
+      color $gray-2
+      .slider__result--value
+        color $gray-2
+  &__result
+    &--value
+      color $black-2
+      font-size 40px
+      font-weight 400
+      line-height 60px
+      margin-top -5px
+    &--end,
+    &--start
+      border-bottom 1px dashed #d0d3e3
+  &__values
+    display flex
+    justify-content space-between
+    margin-top 15px
+  &__end,
+  &__start
+    color $gray-2
+    font-size 15px
+    font-weight 400
+
+.noUi
+  &-horizontal
+    height 1px
+    background #d0d3e3
+    border none
+    box-shadow none
+    .noUi-handle
+      border none
+      border-radius 0
+      box-shadow 7px 7px 9px rgba(171, 153, 136, 0.17 )
+      background-color rgba(0, 0, 0, 0.96)
+      width 23px
+      height 33px
+      top -16px
+      outline none
+      cursor pointer
+      &:before,
+      &:after
+        border-radius 1px
+        background-color #ffffff
+        opacity 0.5
+        width 1px
+        height 11px
+        top 11px
+      &:before
+        left 8px
+      &:after
+        left auto
+        right 8px

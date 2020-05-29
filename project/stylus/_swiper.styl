@@ -1,0 +1,55 @@
+.swiper
+  padding 142px 0 82px
+  &-container 
+    width 410px
+    padding-top 45px
+    margin-left 95px
+  &-button
+    &-prev 
+      top auto
+      bottom 36px
+      left 69%
+      &:after
+        position absolute
+        content ''
+        background-image url(../img/arrowl.svg)
+        height 14px
+        width 14px
+    &-next 
+      top auto
+      bottom 36px
+      left 85%
+      &:after
+        position absolute
+        content ''
+        background-image url(../img/arrowr.svg)
+        height 14px
+        width 14px
+    &-next,
+    &-prev
+      width 50px
+      height 50px
+      border-radius 35px
+      transition all .3s ease
+      background #f24949
+      outline none
+      &:hover
+        background rgb(199, 60, 60)
+  &-sides
+    display flex
+    justify-content space-between
+  &-image
+    margin-left -5px
+  &-text 
+    color $black-3
+    font-size 25px
+    font-weight 400
+    line-height 40px
+    min-height 358px
+    padding-bottom 20px
+  &-slide 
+    padding-top 20px
+  &-author
+    line-height 24px
+    &--text
+      font-size 15px
