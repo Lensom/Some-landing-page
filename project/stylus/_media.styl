@@ -1,7 +1,15 @@
 @import "_vars.styl"
 
+@media (max-width : 1380px)
+	.slider:after
+		left 93.6%
+		transform scale(.7)
+
 /* Large Devices, Wide Screens */
 @media (max-width : 1200px)
+	.slider
+		margin -37px 120px 0 0
+		max-width 492px
 	.phone
 		&__wrapper
 			margin-right 28px
@@ -48,6 +56,9 @@
 		&--lt
 			font-size 16px
 			line-height 24px
+		&--lg 
+			font-size 42px
+			line-height 60px
 	.footer
 		padding 50px 0
 		&__image
@@ -57,9 +68,34 @@
 			font-size 14px
 		.logotype
 			top 7px
+	.greet
+		.title
+			&:after
+				transform scale(.8)
+				top 39px
+		
 
 /* Medium Devices, Desktops */
 @media (max-width : 998px)
+	.greet
+		&__wrapper
+			justify-content center 
+		&__content
+			margin-right 30px
+	.slider
+		margin 0
+		padding 30px
+		max-width 400px
+		&__text 
+			font-size 18px
+			line-height 24px
+		&__result
+			&--value
+				font-size 30px
+		&__range 
+			padding-top 25px
+		&:after
+			display none
 	.header
 		&__wrapper
 			padding 15px 0
@@ -79,7 +115,9 @@
 		justify-content flex-end 
 	.logotype
 		position absolute
-	
+	.steps
+		&__title
+			font-size 18px
 	.us
 		&__side
 			margin-right 0
@@ -138,6 +176,55 @@
 
 /* Small Devices, Tablets */
 @media (max-width : 768px)
+	.steps
+		flex-direction column
+		padding 70px 0 50px
+		&__item
+			flex-direction column
+			align-items center
+			margin-bottom 45px
+		&__title
+			br
+				display none
+		&__text
+			margin-left 0
+			text-align center
+		&__image
+			margin-top 0
+	.slider
+		margin 30px auto 0
+	.greet
+		&__wrapper
+			flex-direction column
+		.title
+			font-size 32px
+			&:after
+				top -26px
+				transform scale(.5)
+				left 50%
+			br 
+				display none
+		&__content
+			margin-right 0
+		&__text
+			display flex
+			justify-content space-between
+			padding 20px 0
+			&:after
+				display none
+			p
+				position relative
+				font-size 18px
+				&:after
+					position absolute
+					content ''
+					top 0
+					left -6px
+					background-image url(../img/block2.svg)
+					width 43px
+					height 33px
+				&:second-child
+					margin 0 10px
 	.phone
 		&__wrapper
 			margin-right 15px
@@ -232,6 +319,72 @@
 
 /* Extra Small Devices, Phones */
 @media (max-width : 480px)
+	.social
+		span
+			margin 0
+	.greet
+		&__wrapper
+			padding-top 10px
+		.title
+			line-height 50px
+			font-size 36px
+			&:after
+				left 50%
+				transform translateX(-50%) scale(.5)
+				top 20px
+		&__text
+			flex-direction column
+			align-items center
+
+	.slider
+		margin 10px auto 0
+		padding 15px
+		&__range 
+			padding-top 10px
+			&--current,
+			&--return
+				font-size 14px
+		&__btn
+			height 40px
+			&--wrapper
+				padding-top 15px
+		&__result
+			&--value
+				font-size 22px
+				line-height 46px
+		&__text
+			font-size 14px
+			line-height 20px
+			br
+				display none
+
+	.menu
+		transform translateX(-100%)
+		transition all .3s ease
+		position fixed
+		top 0
+		left 0
+		right 0
+		bottom 0
+		background $gray-2
+		z-index 1 
+		display flex
+		align-items center
+		justify-content center
+		flex-direction column
+		&__item
+			margin 20px 0
+		&__icon
+			display block
+	.login__wrapper
+		margin 0 50px 0 0
+		a
+			font-size 0
+			line-height 0
+	.phone__wrapper
+		a
+			font-size 0
+			line-height 0
 	.ways
 		&__item
 			width 50%

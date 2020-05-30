@@ -509,7 +509,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Scroll to element
-  let menuItems = document.querySelectorAll('.menu__item a');
+  const menuItems = document.querySelectorAll('.menu__item a');
 
   for (let item of menuItems) {
     item.addEventListener('click', function (e) {
@@ -518,6 +518,12 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById(href).scrollIntoView({ behavior: 'smooth' })
     })
   }
+
+
+  // Hamburger click
+  const mobileMenu = document.querySelector('.menu__icon');
+
+  mobileMenu.addEventListener('click', () => document.body.classList.toggle('openMobileMenu'))
 
 });
 
