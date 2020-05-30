@@ -760,12 +760,15 @@ a {
 .swiper-container {
   width: 410px;
   padding-top: 45px;
-  margin-left: 95px;
+}
+.swiper__wrap {
+  margin-right: 58px;
 }
 .swiper-button-prev {
   top: auto;
   bottom: 36px;
-  left: 69%;
+  bottom: 0;
+  left: 69.2%;
 }
 .swiper-button-prev:after {
   position: absolute;
@@ -777,7 +780,8 @@ a {
 .swiper-button-next {
   top: auto;
   bottom: 36px;
-  left: 85%;
+  bottom: 0;
+  left: 85.4%;
 }
 .swiper-button-next:after {
   position: absolute;
@@ -1164,7 +1168,17 @@ a {
     height: 100%;
   }
   .swiper-author {
-    margin-top: -120px;
+    margin: 0;
+    padding-bottom: 25px;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    bottom: 0;
+    position: absolute;
+    top: calc(100% - 50px);
+  }
+  .swiper__wrap {
+    margin-right: 0;
   }
   .accordion {
     -webkit-box-orient: vertical;
@@ -1413,6 +1427,13 @@ a {
   .swiper-button-prev,
   .swiper-button-next {
     bottom: 0;
+    left: auto;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
+  .swiper-button-prev {
+    right: 65px;
   }
   .swiper-author {
     margin-top: 0;
@@ -1527,13 +1548,6 @@ a {
   .swiper-text {
     font-size: 18px;
     line-height: 24px;
-  }
-  .swiper-button-prev {
-    left: 63%;
-  }
-  .swiper-button-next {
-    right: 0;
-    left: auto;
   }
   .accordion {
     padding: 40px 0 20px;

@@ -141,7 +141,16 @@
 			min-height 256px
 			height 100%
 		&-author 
-			margin-top -120px
+			margin 0
+			padding-bottom 25px
+		&-button
+			&-prev,
+			&-next 
+				bottom 0
+				position absolute
+				top calc(100% - 50px)
+		&__wrap
+			margin-right 0
 	.accordion
 		flex-direction column 
 		&__item
@@ -314,6 +323,11 @@
 			&-prev,
 			&-next
 				bottom 0
+				left auto
+			&-next 
+				right 0
+			&-prev
+				right 65px
 		&-author 
 			margin-top 0
 
@@ -398,12 +412,6 @@
 		&-text 
 			font-size 18px
 			line-height 24px
-		&-button
-			&-prev
-				left 63%
-			&-next
-				right 0
-				left auto
 	.accordion
 		padding 40px 0 20px
 		.text--md
