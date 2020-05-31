@@ -33,7 +33,7 @@
       line-height 20px
       text-transform uppercase
       &:hover
-        color $black
+        color rgba(0, 0, 0, .5)
   &__icon
     width 30px
     height 30px
@@ -107,9 +107,21 @@
       left 6px
     span
       background-color #f24949
+      transition all .3s ease
+    a
+      &:hover
+        color rgba(0, 0, 0, .5)
+        span
+          background-color #c73c3c
 
 .login
   &__wrapper
     span
+      transition all .3s ease
       background-color #475eee
+    a
+      &:hover
+        color rgba(0, 0, 0, .5)
+        span
+          background-color #2f3fa3
   

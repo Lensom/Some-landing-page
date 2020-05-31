@@ -147,7 +147,7 @@ a {
   text-transform: uppercase;
 }
 .menu__item a:hover {
-  color: #000;
+  color: rgba(0,0,0,0.5);
 }
 .menu__icon {
   width: 30px;
@@ -251,9 +251,25 @@ a {
 }
 .phone__wrapper span {
   background-color: #f24949;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.phone__wrapper a:hover {
+  color: rgba(0,0,0,0.5);
+}
+.phone__wrapper a:hover span {
+  background-color: #c73c3c;
 }
 .login__wrapper span {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   background-color: #475eee;
+}
+.login__wrapper a:hover {
+  color: rgba(0,0,0,0.5);
+}
+.login__wrapper a:hover span {
+  background-color: #2f3fa3;
 }
 .wrapper {
   max-width: 1060px;
@@ -359,7 +375,7 @@ a {
   position: absolute;
   content: '';
   top: 68px;
-  left: 2px;
+  left: 15px;
   height: 117px;
   width: 294px;
   background-image: url("../img/block1.svg");
@@ -537,6 +553,9 @@ a {
 .noUi-horizontal .noUi-handle:after {
   left: auto;
   right: 8px;
+}
+.noUi-connect {
+  background: #000;
 }
 .steps {
   display: -webkit-box;
@@ -1039,10 +1058,6 @@ a {
   .swiper-container {
     margin-left: 50px;
   }
-  .accordion .text--md {
-    font-size: 22px;
-    line-height: 34px;
-  }
   .accordion__title span {
     max-width: 44px;
     height: 44px;
@@ -1148,14 +1163,6 @@ a {
   }
   .about__text {
     padding-right: 20px;
-  }
-  .about__text .text--md {
-    font-size: 22px;
-    line-height: 34px;
-  }
-  .about__text .text--lt {
-    font-size: 14px;
-    line-height: 24px;
   }
   .about__table {
     padding: 30px 50px 0px 49px;
@@ -1360,7 +1367,6 @@ a {
     margin: 20px auto 0;
   }
   .accordion .text--md {
-    font-size: 18px;
     line-height: 28px;
   }
   .accordion__title span {
@@ -1416,6 +1422,7 @@ a {
   }
   .swiper-image img {
     margin: 0 auto;
+    max-height: 270px;
   }
   .swiper-container {
     margin: 0;
@@ -1553,7 +1560,6 @@ a {
     padding: 40px 0 20px;
   }
   .accordion .text--md {
-    font-size: 16px;
     line-height: 22px;
   }
   .accordion__title span {
@@ -1598,6 +1604,9 @@ a {
     top: -240px;
     -webkit-transform: scale(0.4);
             transform: scale(0.4);
+  }
+  .swiper-image img {
+    max-height: 220px;
   }
   .btn {
     max-width: none;

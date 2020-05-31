@@ -456,6 +456,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let maxRange = 100000;
   let startPoint = 10000;
   let coef = 5;
+  let step = 500;
 
   let format = value => Intl
     .NumberFormat('ru-RU', { style: 'currency', currency: 'RUB', minimumFractionDigits: 0 })
@@ -474,7 +475,8 @@ document.addEventListener("DOMContentLoaded", function () {
       'min': minRange,
       'max': maxRange
     },
-    step: 500
+    step,
+    connect: [true, false]
   });
 
   let curValue = value => startValue.textContent = Math.floor(value).toLocaleString()
